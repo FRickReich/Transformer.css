@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Effects.css examples</title>
+		
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="../transformer/transformer.css">
+		
+	</head>
+	<body>
+		
+		<h1>Transformer.css</h1>
+		
+		<h3 id="subheader">A Lightweight CSS wrapper for easy css-only animations.</h3>
+		
+		<p>Transformer.css is a css wrapper to create css-only animations, without the use of javascript. The animations are defined by classes inside your html element. 
+		<br/>
+		<br/>Using Transformer.css is easy, implement transformer.css into your html file and add the css wrapper classes to your div, p, li or whatever element you want to animate.
+		<br/>
+		<br/>For example, the code of the cube below looks like this:
+		<br/>
+		<code>&lt;div class="cube rotate360cw time2s alternate infinite step-end"&gt;&lt;/div&gt;</code>
+		<br/>
+		</p>
+		<div id="demo-area">
+			<div class="cube big rotate360cw time2s alternate infinite step-end"></div>
+		</div>
+		<p>
+		<code>cube</code> is just the elements styling class, you can ignore it.<br/>
+		<code>rotate360cw</code> makes the cube rotate 360° clockwise around its own axis.<br/>
+		<code>time2s</code> defines a length of 2 seconds for the animation.<br/>
+		<code>alternate</code> sets the animation to alternate moving that rotates and returns again.<br/>
+		<code>infinite</code> sets the amount of rotations to infinite.<br/>
+		<code>step-end</code> makes the animation use a step-end curve, resulting in a rapid movement.<br/>
+		<br/>
+		</p>
+		
+		<p><b>It is mandatory that you always use all classes to define the animation, otherwise it will not work.</b></p>
+		
+		<div class="content">
+			<h2>Animation Degrees</h2>
+			<ul>
+				<li><div class="cube rotate90cw time7s normal infinite linear"></div></li>
+				<li><div class="cube rotate90ccw time7s normal infinite linear"></div></li>
+				<li><div class="cube rotate10cw time3s normal infinite linear"></div></li>
+				<li><div class="cube rotate360ccw time7s normal infinite linear"></div></li>
+			</ul>
+			<p>
+				The degree of an animation is defined by the <code>.rotate</code> class in steps of 10.
+				<br/>
+				<br/>
+				<code>rotate90cw</code> or <code>rotate120cw</code> for example rotate the html element by 90° or 120° clockwise, while <code>rotate30ccw</code> for example rotates the element 30° counter-clockwise.
+			</p>
+		</div>
+		
+		<div class="content">
+			<h2>Animation Length</h2>
+			<ul>
+				<li><div class="cube rotate360cw time1s normal infinite linear"></div></li>
+				<li><div class="cube rotate360cw time2s normal infinite linear"></div></li>
+				<li><div class="cube rotate360cw time5s normal infinite linear"></div></li>
+				<li><div class="cube rotate360cw time10s normal infinite linear"></div></li>
+			</ul>
+			<p>
+				The length of the animation is defined by the <code>.time</code> class in steps of 1 second, with a maximum of 10 seconds.
+				<br/>
+				<br/>
+				<code>time1s</code> will make the animation run for 1 second, while <code>time5s</code> will make the animation run for 5 seconds.
+			</p>
+		</div>
+		
+		<div class="content">
+			<h2>Animation Direction</h2>
+			<ul>
+				<li><div class="cube rotate90cw time1s normal infinite linear"></div></li>
+				<li><div class="cube rotate90cw time3s reverse infinite linear"></div></li>
+				<li><div class="cube rotate90cw time9s alternate infinite linear"></div></li>
+				<li><div class="cube rotate90cw time7s alternate-reverse infinite linear"></div></li>
+			</ul>
+			<p>
+				The direction of the animation is defined by the following classes:
+				<br/>
+				<br/>
+				<code>normal</code> the animation goes into its normal direction.<br/>
+				<code>reverse</code> the animation goes backwards.<br/>
+				<code>alternate</code> The animation goes an alternative direction<br/>
+			</p>
+		</div>
+		
+		<div class="content">
+			<h2>Animation Steps</h2>
+			<ul>
+				<li><div class="cube rotate360cw time2s normal infinite linear"></div></li>
+				<li><div class="cube rotate360cw time2s normal times1 linear"></div></li>
+				<li><div class="cube rotate360cw time2s normal times5 linear"></div></li>
+				<li><div class="cube rotate360cw time2s normal times3 linear"></div></li>
+			</ul>
+			<p>
+				The animation steps are defined as either infinite or an amount of 1 - 10.
+				<br/>
+				<br/>
+				<code>infinite</code> makes the animation repeat itself forever.<br/>
+				<code>times1</code> tells the animation to run X amount of times.<br/>
+			</p>
+		</div>
+		
+		<div class="content">
+			<h2>Animation Transistion</h2>
+			<ul>
+				<li><div class="cube rotate360cw time4s normal infinite linear"></div></li>
+				<li><div class="cube rotate360cw time3s normal infinite ease-in-out"></div></li>
+				<li><div class="cube rotate360cw time6s normal infinite ease-in"></div></li>
+				<li><div class="cube rotate360cw time2s normal infinite step-end "></div></li>
+			</ul>
+			<p>
+				The animation transistions change the appeal of the animation. For example if it goes linear all the way through, or starts slow and ends fast.
+				<code>linear</code> makes the animation go at a steady speed<br/>
+				<code>ease-in</code> makes the animation start slow and end fast<br/>
+				<code>ease-in-out</code> starts slow, gains speed and slow down again<br/>
+				<code>ease-out</code> makes the animation start fast and end slow<br/>
+			</p>
+		</div>
+		
+		<div class="content">
+			<footer>
+				<p>© 2016 by F. Rick Reich</p>
+			</footer>
+		</div>
+
+		<!-- <h2>Animate by Degree°</h2>
+		<div class="cube rotate360cw time7s normal infinite linear"></div> -->
+	</body>
+</html>
